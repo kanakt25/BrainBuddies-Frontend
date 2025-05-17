@@ -1,0 +1,75 @@
+/* Profile.css - Page-level styles only */
+.profile-page {
+  background: linear-gradient(135deg, #ecf4f5, #e4f5f7);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradientShift 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Spinner with modern look */
+.loading-spinner {
+  width: 70px;
+  height: 70px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #00bcd4;
+  animation: spin 1s ease-in-out infinite;
+  margin: 100px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message with bounce effect */
+.error-profile {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: bounceIn 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+/* other user profile */
+.other-user-profile-container {
+  width: 100%;
+  max-width: 900px; /* Match profile-container width */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Ensure loading/error states are centered */
+.other-user-profile-container .loading-text,
+.other-user-profile-container .error-text {
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border-width: 4px;
+  }
+  
+  .error-profile {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}

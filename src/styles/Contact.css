@@ -1,0 +1,152 @@
+/* Contact.css */
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeIn 1.2s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.contact-form-section {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: slideUp 1s ease forwards;
+}
+
+.contact-form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.contact-submit-btn {
+  background-color: #357ab7;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
+.contact-details {
+  text-align: center;
+  margin-top: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.contact-details h2 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+
+  .contact-container h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form-section h2,
+  .contact-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,158 @@
+/* Root container */
+.dashboard-container {
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* General Button Styles */
+button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem 0;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #004ecc;
+  transform: scale(1.03);
+}
+
+/* Sections */
+section {
+  background: #f9f9f9;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Section Titles */
+section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Profile Section */
+.edit-profile input,
+.edit-profile select,
+.edit-profile textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.05rem;
+  transition: border 0.3s ease;
+}
+
+.edit-profile input:focus,
+.edit-profile textarea:focus,
+.edit-profile select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Profile Pic */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Role Checkboxes */
+.dashboard-role {
+  margin: 1.5rem 0;
+}
+
+.dashboard-role label {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.dashboard-role input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.disabled-btn {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Class/Teacher List */
+.my-classes ul,
+.my-teachers ul {
+  list-style: none;
+  padding: 0;
+}
+
+.my-classes li,
+.my-teachers li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.05rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .edit-profile input,
+  .edit-profile textarea,
+  .edit-profile select {
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

@@ -1,0 +1,133 @@
+/* Animated background */
+.register-container {
+  min-height: 100vh;
+  background: 
+    linear-gradient(-45deg, rgba(224, 242, 254, 0.85), rgba(240, 253, 244, 0.85), rgba(237, 233, 254, 0.85), rgba(254, 249, 195, 0.85)),
+    url('/login.avif');
+  background-size: cover, 400% 400%;
+  background-position: center, 0% 50%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.register-form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.register-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Checkbox group */
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group label {
+  font-size: 1rem;
+  color: #374151;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Button */
+.register-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #1e40af;
+}
+
+/* Links */
+.register-links {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.register-link {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 1.5rem;
+  }
+
+  .register-heading {
+    font-size: 1.5rem;
+  }
+
+  .checkbox-group {
+    flex-direction: column;
+  }
+}

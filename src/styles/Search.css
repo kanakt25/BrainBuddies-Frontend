@@ -1,0 +1,278 @@
+/* src/styles/Search.css */
+.search-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8effc, #e9d8fd);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-bar button:hover {
+  background-color: #444c56;
+}
+
+/* Filters Section */
+/* Filter Button */
+.filter-button {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-button:hover {
+  background-color: #f0f4ff;
+  border-color: #b3d4fc;
+}
+
+/* Filters Dropdown */
+.filters-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: 260px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+  animation: fadeSlide 0.3s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filters-dropdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filters-dropdown label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filters-dropdown select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.filters-dropdown select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+/* Teacher List */
+.teacher-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.teacher-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+
+.teacher-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(45deg, rgba(0,123,255,0.4), rgba(255,255,255,0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.teacher-card:hover::before {
+  opacity: 1;
+}
+
+.teacher-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.teacher-card:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6), 0 0 30px rgba(95, 143, 194, 0.3);
+  transform: translateY(-5px);
+}
+
+
+.teacher-name {
+  cursor: pointer;
+  color: #007bff;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.teacher-name:hover {
+  text-decoration: underline;
+}
+
+.teacher-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.teacher-card button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-card button:hover {
+  background-color: #0056b3;
+}
+
+.no-results {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* go to chat */
+.chat-button {
+  display: block;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.chat-button:hover {
+  background-color: #45a049;
+}
+/* Responsive adjustments for small devices */
+@media (max-width: 658px) {
+  .search-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  .filters-dropdown {
+    position: static;
+    width: 100%;
+    padding: 16px;
+    box-shadow: none;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-top: 10px;
+    animation: none;
+  }
+
+  .filter-button {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .teacher-list {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-card {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .teacher-name {
+    font-size: 16px;
+  }
+
+  .teacher-card button {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+}

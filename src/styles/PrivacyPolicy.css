@@ -1,0 +1,114 @@
+/* Main container */
+.privacy-policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background: #fdfdfd;
+  font-family: 'Segoe UI', sans-serif;
+  color: #0a121e;
+  line-height: 1.7;
+  animation: fadeSlideIn 1s ease-out;
+}
+
+/* Main heading */
+.privacy-policy-container h1 {
+  font-size: 2.75rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1e40af;
+  position: relative;
+}
+
+/* Section styling */
+.privacy-policy-container section {
+  margin-bottom: 2.5rem;
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-left: 6px solid #60a5fa;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  animation: fadeUp 0.6s ease forwards;
+  transform: translateY(30px);
+  opacity: 0;
+  background-image: url('/brain-centers.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+}
+
+/* Animate each section with a stagger */
+.privacy-policy-container section:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+/* Subheadings */
+.privacy-policy-container h2 {
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.3rem;
+}
+
+/* Paragraphs */
+.privacy-policy-container p {
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+/* List items */
+.privacy-policy-container ul {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.privacy-policy-container li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    padding: 2rem 1rem;
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .privacy-policy-container p,
+  .privacy-policy-container li {
+    font-size: 1rem;
+  }
+
+  .privacy-policy-container section {
+    padding: 1.2rem 1.3rem;
+  }
+}
